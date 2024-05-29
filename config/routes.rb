@@ -1,5 +1,27 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Devise routes with custom controllers
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    confirmations: 'users/confirmations',
+    registrations: 'users/registrations'
+  }
 
-  root 'home#index'
+  # Routes for authenticated users
+  authenticated :user do
+    root to: 'dash_boards#index', as: :authenticated_root
+    get 'users/dash_boards', to: 'dash_boards#index', as: :users_dash_boards
+    delete 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+
+  # Other routes
+  resources :dash_boards, only: [:index]
+
+  # Letter Opener Web for development environment
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
+  devise_scope :user do
+    root to: 'devise/sessions#new'
+  end
 end
