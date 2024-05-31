@@ -2,17 +2,24 @@
 <html>
   <head>
     <title>JITM</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
   </head>
-
   <body>
-
-
-    <%= yield %>
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="col-md-6">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
