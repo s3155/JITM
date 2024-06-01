@@ -1,0 +1,38 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認用）"
+        current_password: "現在のパスワード"
+
+  helpers:
+    submit:
+      user:
+        create: "登録"
+        update: "更新"
+
+  devise:
+    registrations:
+      new:
+        sign_up: "サインアップ"
+      edit:
+        title: "アカウント情報の編集"
+        cancel_account: "アカウントの削除"
+        update: "更新"
+    sessions:
+      new:
+        sign_in: "ログイン"
+    passwords:
+      new:
+        send_instructions: "パスワードの再設定手順を送信"
+
+  devise:
+    shared:
+      links:
+        sign_in: "ログイン"
+        sign_up: "サインアップ"
+        forgot_your_password: "パスワードを忘れましたか？"
+        didn_t_receive_confirmation_instructions: "確認用の指示が届きませんでしたか？"

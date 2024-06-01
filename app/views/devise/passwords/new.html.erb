@@ -1,4 +1,4 @@
-<h2>Forgot your password?</h2>
+<h2 class="mb-4 text-center">Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "needs-validation" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -8,7 +8,7 @@
     <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", required: true %>
   </div>
 
-  <div class="mb-3">
+  <div class="text-center">
     <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
   </div>
 <% end %>

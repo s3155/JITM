@@ -46,6 +46,9 @@ group :development do
   gem 'letter_opener_web', '~> 1.0'
 end
 
+gem 'rails-i18n'
+gem 'devise-i18n-views'
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
