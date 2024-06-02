@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: "メールアドレス"
+        password: "パスワード"
+      remember_me: "ログイン情報を記憶する"
+  helpers:
+    submit:
+      user:
+        create: "ログインする"
+  devise:
+    sessions:
+      new:
+        title: "ログイン"
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+      invalid: "メールアドレスまたはパスワードが無効です。"

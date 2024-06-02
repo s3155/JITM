@@ -1,0 +1,26 @@
+ja:
+  devise:
+    failure:
+      invalid: メールアドレスまたはパスワードが正しくありません。
+    sessions:
+      signed_in: ログインに成功しました。
+      signed_out: ログアウトしました。
+    registrations:
+      user:
+        signed_up: "アカウント登録が完了しました。"
+      signed_up: "アカウント登録が完了しました。"
+    shared:
+      links:
+        log_in: "ログイン"
+        sign_up: "サインアップ"
+        forgot_your_password: "パスワードを忘れましたか？"
+        didn_t_receive_confirmation_instructions: "確認用の指示が届きませんでしたか？"
+        didn_t_receive_unlock_instructions: "アンロック用の指示が届きませんでしたか？"
+        sign_in_with: "でサインイン"
+  errors:
+    messages:
+      not_saved:
+        one: '1件のエラーが発生したため %{resource} は保存されませんでした。'
+        other: '%{count} 件のエラーが発生したため %{resource} は保存されませんでした。'
+
+

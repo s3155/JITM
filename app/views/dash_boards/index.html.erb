@@ -1,11 +1,7 @@
-<h1>Dash Boards</h1>
-<p>Hello,sample!</p>
+<h1 class="mb-4 text-center">Dash Boards</h1>
+<p class="mb-4 text-center">Hello, sample!</p>
 
-<div class="actions">
-  <%= link_to '編集', edit_user_registration_path, class: 'btn btn-primary' %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { confirm: '本当にログアウトしますか？' } %>
-  
-
-
-  
+<div class="actions d-flex flex-column justify-content-center align-items-center">
+  <%= link_to '編集', edit_user_registration_path, class: 'btn btn-primary me-2 w-50 mb-2' %>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { confirm: '本当にログアウトしますか？' }, class: 'btn btn-warning w-50' %>
 </div>
