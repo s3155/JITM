@@ -1,14 +1,13 @@
 ja:
   devise:
     failure:
-      invalid: メールアドレスまたはパスワードが正しくありません。
+      invalid: "メールアドレスまたはパスワードが正しくありません。"
     sessions:
-      signed_in: ログインに成功しました。
-      signed_out: ログアウトしました。
+      signed_in: "ログインに成功しました。"
+      signed_out: "ログアウトしました。"
     registrations:
       user:
         signed_up: "アカウント登録が完了しました。"
-      signed_up: "アカウント登録が完了しました。"
     shared:
       links:
         log_in: "ログイン"
@@ -17,10 +16,21 @@ ja:
         didn_t_receive_confirmation_instructions: "確認用の指示が届きませんでしたか？"
         didn_t_receive_unlock_instructions: "アンロック用の指示が届きませんでしたか？"
         sign_in_with: "でサインイン"
+    passwords:
+      minimum_password_length: "（%{count}文字以上）"
+    mailer:
+      reset_password_instructions:
+        greeting: "%{email}様"
+        intro: "パスワード再設定の依頼を受けたため、メールを送信しています。下のリンクからパスワードの再設定ができます。"
+        action: "パスワード変更する"
+        outro: "パスワード再設定の依頼をしていない場合、このメールを無視してください。"
+        outro_2: "パスワードの再設定は、上のリンクから新しいパスワードを登録するまで完了しません。"
+        subject: "パスワード変更の指示"
+      unlock_instructions:
+        subject: "アカウントロック解除の指示"
+
   errors:
     messages:
       not_saved:
-        one: '1件のエラーが発生したため %{resource} は保存されませんでした。'
-        other: '%{count} 件のエラーが発生したため %{resource} は保存されませんでした。'
-
-
+        one: "1件のエラーが発生したため %{resource} は保存されませんでした。"
+        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
