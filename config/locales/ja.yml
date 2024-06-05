@@ -66,13 +66,13 @@ ja:
         back: "戻る"
     buttons:
       sign_in: "ログイン"
-      sign_up: "サインアップ"
+      sign_up: "アカウント登録"
       send_instructions: "パスワードの再設定メールを送信する"
       change_password: "パスワードを変更"
       update: "更新"
     headers:
       change_password: "パスワードを変更"
-      sign_up: "サインアップ"
+      sign_up: "アカウント登録"
       log_in: "ログイン"
       edit_account: "アカウント情報の編集"
       forgot_password: "パスワードを忘れましたか？"
