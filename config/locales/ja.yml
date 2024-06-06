@@ -3,36 +3,82 @@ ja:
     attributes:
       user:
         name: "名前"
-        email: "メールアドレス"
+        email: "Eメール"
         password: "パスワード"
         password_confirmation: "パスワード（確認用）"
         current_password: "現在のパスワード"
-
+        confirm_new_password: "パスワード（確認用）"
   helpers:
     submit:
       user:
         create: "登録"
         update: "更新"
+        log_in: "ログイン"
+        resend_confirmation_instructions: "アカウント確認メールを再送"
+        send_reset_password_instructions: "パスワード再設定の手順を送信"
 
   devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: "アカウント確認のメールを受け取っていませんか？"
     registrations:
       new:
         sign_up: "サインアップ"
       edit:
-        title: "アカウント情報の編集"
-        cancel_account: "アカウントの削除"
+        title: "sampleの編集"
+        leave_blank: "空欄のままなら変更しません。"
+        cancel_account: "アカウント削除"
         update: "更新"
+        confirm_changes: "変更を反映するには現在のパスワードを入力してください"
+        unhappy: "気に入りません"
+        are_you_sure: "本当にアカウントを削除しますか？"
+        minimum_password_length: "%{count}文字以上"
+        password_minimum: "%{count}文字以上"
+        
+
     sessions:
       new:
         sign_in: "ログイン"
+        log_in: "ログイン"
     passwords:
       new:
         send_instructions: "パスワードの再設定手順を送信"
+        forgot_your_password: "パスワードを忘れましたか？"
+        send_reset_password_instructions: "パスワード再設定の手順を送信"
+      edit:
+        change_password: "パスワードを変更"
+        title: "パスワードを変更する"
+        new_password: "新しいパスワード"
+        confirm_new_password: "新しいパスワードの確認"
+        minimum_password_length: "%{count}文字以上"
+        change_my_password: "パスワードを変更する"
 
-  devise:
+      forgot_your_password: "パスワードを忘れましたか？"
+        
     shared:
       links:
         sign_in: "ログイン"
-        sign_up: "サインアップ"
+        sign_up: "アカウント登録"
         forgot_your_password: "パスワードを忘れましたか？"
-        didn_t_receive_confirmation_instructions: "確認用の指示が届きませんでしたか？"
+        didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか？"
+        didn_t_receive_unlock_instructions: "アンロック用の指示が届きませんでしたか？"
+        sign_in_with: "でサインイン"
+        back: "戻る"
+    buttons:
+      sign_in: "ログイン"
+      sign_up: "アカウント登録"
+      send_instructions: "パスワードの再設定メールを送信する"
+      change_password: "パスワードを変更"
+      update: "更新"
+    headers:
+      change_password: "パスワードを変更"
+      sign_up: "アカウント登録"
+      log_in: "ログイン"
+      edit_account: "アカウント情報の編集"
+      forgot_password: "パスワードを忘れましたか？"
+
+  errors:
+    messages:
+      not_saved:
+        one: "エラーが発生したため %{resource} は保存されませんでした。"
+        other: "エラーが発生したため %{resource} は保存されませんでした。"
