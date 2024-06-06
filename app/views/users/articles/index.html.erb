@@ -1,0 +1,43 @@
+<h1 class="text-center">記事一覧</h1>
+<div class="container">
+  <div class="row justify-content-center"> <!-- 中央に配置 -->
+    <div class="col-md-6 text-center"> <!-- 幅を指定して中央に配置 -->
+      <%= link_to '記事新規作成', new_users_article_path, class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>詳細表示</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th class="text-center">画像</th>
+      <th class="text-center">編集・削除</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to '詳細', users_article_path(article), class: 'btn btn-primary' %></td>
+        <td><%= article.title %></td>
+        <td><%= article.content %></td>
+        <td class="text-center">
+          <% if article.image_file.attached? %>
+            <div class="text-center"> <!-- 画像を中央揃えにする -->
+              <%= image_tag url_for(article.image_file), size: "2x" %>
+            </div>
+            
+          <% else %>
+            <p>画像なし</p>
+          <% end %>
+        </td>
+        <td class="text-center">
+          <%= link_to '編集', edit_users_article_path(article), class: 'btn btn-success' %>
+          <%= link_to '削除', users_article_path(article), method: :delete, data: { confirm: '本当に削除しますか?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
