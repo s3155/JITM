@@ -1,6 +1,8 @@
 # app/controllers/users/articles_controller.rb
 module Users
-    class ArticlesController < ApplicationController
+  class ArticlesController < ApplicationController
+    before_action :authenticate_user! # ログインユーザーのみを許可する
+
       def index
         @articles = Article.all
       end
