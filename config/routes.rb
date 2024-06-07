@@ -8,30 +8,30 @@ Rails.application.routes.draw do
 
   # Routes for authenticated users
   authenticated :user do
-    root to: 'dash_boards#index', as: :authenticated_root
-    get 'dash_boards', to: 'dash_boards#index', as: :users_dash_boards
+    root to: 'users/dash_boards#index', as: :authenticated_root
+    # Updated routes to use the users namespace
+    get 'dash_boards', to: 'users/dash_boards#index', as: :users_dash_boards
     delete 'logout', to: 'devise/sessions#destroy', as: :logout
   end
 
   # Other routes
-  resources :dash_boards, only: [:index]
-  
+  # Removed duplicate and unnecessary route for dash_boards
+  # resources :dash_boards, only: [:index]
+
   # Letter Opener Web for development environment
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
+  # Devise scope for unauthenticated users
   devise_scope :user do
     root to: 'devise/sessions#new'
   end
 
-# routes.rb
-
-namespace :users do
-  resources :articles, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-end
-
-
-
-
+  # Users namespace
+  namespace :users do
+    resources :articles, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+    # Corrected users_dash_boards route within users namespace
+    resources :dash_boards, only: [:index]
+  end
 end

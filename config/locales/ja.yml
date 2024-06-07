@@ -3,11 +3,13 @@ ja:
     attributes:
       user:
         name: "名前"
-        email: "Eメール"
+        email: "メールアドレス"
         password: "パスワード"
+        remember_me: "次回から自動的にログイン"
         password_confirmation: "パスワード（確認用）"
         current_password: "現在のパスワード"
         confirm_new_password: "パスワード（確認用）"
+        
   helpers:
     submit:
       user:
@@ -82,3 +84,10 @@ ja:
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした。"
         other: "エラーが発生したため %{resource} は保存されませんでした。"
+
+
+  mailer:
+    welcome:  "%{email}様"
+    confirm_instruction: "以下のリンクをクリックし、メールアドレスの確認手続きを完了させてください。"
+    confirm_account: "メールアドレスの確認"
+    

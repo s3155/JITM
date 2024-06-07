@@ -28,10 +28,7 @@
             <div class="text-center"> <!-- 画像を中央揃えにする -->
               <%= image_tag url_for(article.image_file), size: "2x" %>
             </div>
-            
-          <% else %>
-            <p>画像なし</p>
-          <% end %>
+          <% end %> <!-- 画像がない場合は何も表示しない -->
         </td>
         <td class="text-center">
           <%= link_to '編集', edit_users_article_path(article), class: 'btn btn-success' %>

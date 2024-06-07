@@ -28,7 +28,12 @@ ja:
         subject: "パスワード変更の指示"
       unlock_instructions:
         subject: "アカウントロック解除の指示"
-
+      confirmation_instructions:
+        subject: "メールアドレス確認メール"
+      email_changed:
+        subject: "メールアドレス変更通知"
+      password_change:
+        subject: "パスワード変更通知"
   errors:
     messages:
       not_saved:
